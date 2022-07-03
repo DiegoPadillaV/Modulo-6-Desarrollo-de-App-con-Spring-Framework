@@ -11,3 +11,7 @@
 - Se debe generar 1 interfaz y 1 implementación de tipo DAO que acceda a las entidades a través del repositorio Autowired y en la clase dao se debe transformar a DTO los valores de las entidades
 - Se debe generar una clase service que permita separar la clase controler de la DAO y acceda a la interfaz del DAO Autowired
 - Incluir las librerías necesarias en el POM xml para ejecutar las pruebas
+
+## Notas: 
+    - Usuario Admin: admin@admin.cl
+    - Password Admin: 123
