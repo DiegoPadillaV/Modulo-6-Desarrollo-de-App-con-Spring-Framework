@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head data-th-replace="parts/head :: cabecera(~{::title}, _)">
+		<meta charset="UTF-8">
+		<title>Ingreso</title>
+		<link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<main class="form-signin w-100 m-auto text-center">
+				<form method="post" data-th-action="@{/ingreso}">
+					<img class="mb-4" data-th-src="@{/img/logo.png}"
+						alt="" height="100">
+					<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+					
+					<div data-th-if="${param.error}" class="alert alert-danger">
+						Usuario y/o contraseña invalido(s).
+					</div>
+					
+					<div class="form-floating">
+						<input type="text" class="form-control" id="floatingInput" name="username"> <label for="floatingInput">Usuario</label>
+					</div>
+					<div class="form-floating">
+						<input type="password" class="form-control" id="floatingPassword" name="password"> <label for="floatingPassword">Password</label>
+					</div>
+		
+					<div class="checkbox mb-3">
+						<label> <input type="checkbox" value="remember-me">
+							Remember me
+						</label>
+					</div>
+					<button class="w-100 btn btn-lg btn-primary" type="submit">Sign
+						in</button>
+					<p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+				</form>
+			</main>
+		</div>
+	</body>
+</html>

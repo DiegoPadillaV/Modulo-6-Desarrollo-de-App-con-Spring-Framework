@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>CFT - Form. Alumno</title>
+		<meta charset="UTF-8"/>
+		<link th:href="@{/css/estilo.css}" rel="stylesheet">
+	</head>
+	<body>
+		<h1>Form Alumno</h1>
+		
+		<form th:action="@{/alumno/procesar}" th:object="${alumno}" method="post">
+			
+			<input type="hidden" th:field="*{id}" />
+
+		 	<p>
+		 		Nombre: <input type="text" th:field="*{nombre}" />
+		 		<span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" style="color: red;" />
+		 	</p>
+		 	<p>
+		 		Fecha Nacimiento: <input type="date" th:field="*{fechaNacimiento}" />
+		 		<span th:if="${#fields.hasErrors('fechaNacimiento')}" th:errors="*{fechaNacimiento}" style="color: red;" />
+		 	</p>
+		 	Carrera:
+		 	<select th:field="*{carrera}">
+		 		<option th:each="carrera : ${carreras}" th:value="${carrera.id}" th:text="${carrera.nombre}" />
+		 	</select>
+		 	<button type="submit">Guardar</button>
+		</form>
+	</body>
+</html>
