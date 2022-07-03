@@ -11,7 +11,7 @@
 - NO es necesario hacer autenticación
 ## Muestra
 
-Despliegue en [heroku](https://github.com/DiegoPadillaV/Modulo-6-Desarrollo-de-App-con-Spring-Framework/tree/main/catalogo-productos)
+Despliegue en [heroku](https://catalogo-productos-jpa.herokuapp.com)
 
 ### Notas:
     - Cualquier entrada hecha a la base de datos es efímera y será borrada despues de un tiempo.
